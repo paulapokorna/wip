@@ -1,0 +1,133 @@
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.content {
+  width: 100vh; /* Set the width to the viewport height */
+  height: 100vw; /* Set the height to the viewport width */
+  transform: rotate(90deg) translateY(-100%); /* Rotate 90 degrees clockwise and move it up 100% of its own width to keep it in view */
+  transform-origin: top left; /* Set the origin of the transformation */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  position: absolute;
+}
+
+h2, p {
+  margin: 0;
+}
+
+
+#canvas {
+  overflow-x: scroll;
+}
+
+canvas {
+  position: relative;
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.text-style {
+  text-align: left;
+  font-size: 12px;
+  font-family: monospace;
+  color: rgb(255, 244, 28);
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 0.3px;
+}
+
+.scroll-area {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 3000px;
+  overflow-y: scroll;
+  touch-action: none;
+}
+
+.scroll-area-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  touch-action: none;
+}
+
+.top-bar {
+  position: fixed;
+  width: 1080px;
+  top: 1120px;
+  right: 0;
+  padding: 20px;
+  border-bottom: 1px solid black;
+  touch-action: none;
+  transform: rotate(90deg); /* Rotate 90 degrees clockwise */
+  transform-origin: top right; /* Set the origin of the transformation */
+  z-index: 999;
+}
+
+.top-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top-bar-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 24px;
+}
+
+.top-bar-button {
+  padding: 2px 15px;
+  color: black;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 12;
+  font-weight: bold;
+}
+
+.side-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 159px;
+  height: calc(100vh - 132px);
+  padding: 24px;
+  top: calc(159px + 48px);
+  right: 150px;
+  gap: 24px;
+  border-right: 1px solid black;
+  transform: rotate(90deg); /* Rotate 90 degrees clockwise */
+  transform-origin: top right; /* Set the origin of the transformation */
+  touch-action: none;
+  z-index: 999;
+  
+}
+
+.side-bar-terms {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 24px;
+}
+
+.side-bar-disclaimer {
+  font-weight: bold;
+}
+
+#button-save {
+  z-index: 999;
+}
